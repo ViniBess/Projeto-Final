@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Portifolio Lorem</title>
+</head>
+
+<body class="relative bg-zinc-800 text-white font-sans antialiased">
+
+    <header
+        class="bg-white/10 backdrop-blur-md rounded-lg text-white flex flex-wrap items-center justify-between w-full px-5 lg:px-[15%] 2xl:px-[25%] py-5 fixed top-0 left-0 z-50">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <img src="./src/images/logo22.png" alt="logo" class="w-16 h-16 lg:mr-10">
+        </div>
+
+        <!-- Botão do Menu Hamburguer (mobile) -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+
+        <!-- Menu de Navegação (centralizado em desktop) -->
+        <nav id="menu"
+            class="hidden lg:flex items-center justify-center gap-8 lg:gap-12 w-full lg:w-auto absolute lg:relative left-0 lg:left-auto top-full lg:top-auto mt-0 lg:mt-0 bg-white/10 lg:bg-transparent backdrop-blur-lg lg:backdrop-blur-none py-4 lg:py-0">
+            <a href="index.html#home" class="block py-2 hover:text-amber-400 transition">Home</a>
+            <a href="index.html#habilidades" class="block py-2 hover:text-amber-400 transition">Habilidades</a>
+            <a href="index.html#portfolio" class="block py-2 hover:text-amber-400 transition">Portfólio</a>
+            <a href="index.html#experiencia" class="block py-2 hover:text-amber-400 transition">Experiência</a>
+            <a href="index.html#contato" class="block py-2 hover:text-amber-400 transition">Contato</a>
+        </nav>
+
+    </header>
+
+    <!-- Script para o Menu Hamburguer (mantido igual) -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <section id="portfolio"
+        class="flex items-center flex-col mt-20 pt-16 pb-16 min-h-screen bg-[url(/src/images/fundo-portifolio.jpg)] bg-cover bg-center font-bold text-white">
+        <h1 class="text-4xl font-bold mb-3 hover:text-amber-400 transition-colors">Portfólio <i
+                class="bi bi-box-fill"></i></h1>
+        <p class="text-xl mb-12">Meus projetos</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-8 max-w-6xl mx-auto">
+            <!-- Sistema de Gestão -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="1">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto1.gif" alt="Sistema de Gestão"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                Sistema de Gestão
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Plataforma E-commerce -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="2">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto2.gif" alt="Plataforma E-commerce"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                Plataforma E-commerce
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Aplicativo de Produtividade -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="3">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto3.gif" alt="Aplicativo de Produtividade"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                Aplicativo de Produtividade
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Plataforma de Business Intelligence -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="4">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto4.gif" alt="Plataforma de Business Intelligence"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                Plataforma de Business Intelligence
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Site Corporativo Moderno -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="5">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto5.gif" alt="Site Corporativo Moderno"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                Site Corporativo Moderno
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- API de Serviços Financeiros -->
+            <div class="group relative">
+                <button class="open-overlay w-full h-full p-0 border-none bg-transparent cursor-pointer"
+                    data-project="6">
+                    <div class="aspect-square overflow-hidden rounded-xl shadow-2xl">
+                        <img src="src/images/projeto6.gif" alt="API de Serviços Financeiros"
+                            class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <h3
+                                class="text-white text-2xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                API de Serviços Financeiros
+                            </h3>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed hidden inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+        <div
+            class="relative bg-white/10 backdrop-blur-md rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto text-white mx-auto">
+            <!-- Botão Anterior -->
+            <button id="prevProject"
+                class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 rounded-full p-2 shadow-lg z-10 transition-all duration-300 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Botão Próximo -->
+            <button id="nextProject"
+                class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-600 rounded-full p-2 shadow-lg z-10 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <!-- Botão Fechar -->
+            <button id="closeOverlay"
+                class="absolute top-4 right-4 text-white hover:text-gray-500 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Conteúdo do Overlay -->
+            <div class="p-8">
+                <h2 id="project-title" class="text-3xl font-bold mb-6 text-center text-white">Projeto</h2>
+                <img id="project-image" src="" alt="" class="w-full h-auto mb-6 rounded-lg mx-auto " />
+                <div id="project-content" class="prose max-w-none text-white">
+                    <!-- Conteúdo será carregado dinamicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        class="flex items-center justify-center hover:text-amber-400 transition-colors bg-white/10 backdrop-blur-md">
+        <img src="./src/images/logo22.png" alt="logo" class="w-16 h-16 lg:mr-10">
+        <p>© 2025 por Tales Roberto. Criado orgulhosamente pelos alunos do curso de desenvolvimento web da CPDI -
+            (Manoel, Marcus, Jaqueline)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Variáveis globais
+            let currentProjectId = 1;
+            const totalProjects = 6; // Total de projetos no portfólio
+
+            // Dados COMPLETOS dos projetos (inclua todos os 6)
+            const projects = {
+                1: {
+                    title: "Sistema de Gestão",
+                    image: "src/images/projeto1.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>Sistema de Gestão Comercial Integrado</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>Desenvolvimento de plataforma completa para automação de processos empresariais com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Controle de estoque em tempo real</li>
+                <li>Módulo financeiro com fluxo de caixa integrado</li>
+                <li>Painéis analíticos customizáveis</li>
+                <li>API para integração com outros sistemas</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Tecnologias utilizadas:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>React</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Node.js</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>MongoDB</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Tailwind CSS</span>
+            </div>
+        </div>
+        <div class='mt-4'>
+            <h4 class='font-semibold mb-2'>Resultados alcançados:</h4>
+            <p>Redução de 40% no tempo de processos operacionais e aumento de 25% na eficiência de gestão para nossos clientes.</p>
+        </div>
+    `
+                },
+                2: {
+                    title: "Plataforma E-commerce",
+                    image: "src/images/projeto2.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>Loja Virtual Premium</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>Desenvolvimento completo de plataforma de e-commerce com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Catálogo de produtos com filtros avançados</li>
+                <li>Sistema de carrinho e checkout otimizado</li>
+                <li>Integração com gateways de pagamento (Mercado Pago, PagSeguro)</li>
+                <li>Painel administrativo para gestão de pedidos</li>
+                <li>Design mobile-first e 100% responsivo</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Stack Tecnológica:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Vue.js</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Laravel</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>MySQL</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Tailwind CSS</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>API REST</span>
+            </div>
+        </div>
+        <div class='mt-4'>
+            <h4 class='font-semibold mb-2'>Impacto Gerado:</h4>
+            <ul class='list-disc pl-5 space-y-1'>
+                <li>Conversão de 3.2% para 5.8% após otimizações de UX</li>
+                <li>Tempo médio de carregamento reduzido em 62%</li>
+                <li>Abandono de carrinho reduzido em 35%</li>
+            </ul>
+        </div>
+    `
+                },
+                3: {
+                    title: "Aplicativo de Produtividade",
+                    image: "src/images/projeto3.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>TaskMaster - Gestão de Tarefas Inteligente</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>Aplicativo mobile desenvolvido para otimização de produtividade pessoal e profissional com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Sincronização em tempo real entre dispositivos</li>
+                <li>Notificações inteligentes baseadas em hábitos</li>
+                <li>Integração com calendários (Google, Outlook)</li>
+                <li>Análise de produtividade com gráficos semanais</li>
+                <li>Modo escuro e acessibilidade</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Tecnologias Utilizadas:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>React Native</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Firebase</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Redux</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>TypeScript</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Figma</span>
+            </div>
+        </div>
+        <div class='mt-4'>
+            <h4 class='font-semibold mb-2'>Resultados Alcançados:</h4>
+            <ul class='list-disc pl-5 space-y-1'>
+                <li>4.8/5 avaliação média na Play Store</li>
+                <li>15.000+ downloads nos primeiros 3 meses</li>
+                <li>Tempo médio de uso diário: 23 minutos</li>
+                <li>Redução de 40% em tarefas esquecidas (testes com usuários)</li>
+            </ul>
+        </div>
+    `
+                },
+                4: {
+                    title: "Plataforma de Business Intelligence",
+                    image: "src/images/projeto4.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>Insights360 - Dashboard Analítico Avançado</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>Solução completa de visualização e análise de dados corporativos com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Integração com múltiplas fontes de dados (SQL, Google Analytics, APIs)</li>
+                <li>Visualizações personalizáveis (gráficos, tabelas, heatmaps)</li>
+                <li>Alertas inteligentes para KPI's críticos</li>
+                <li>Exportação de relatórios em PDF/Excel</li>
+                <li>Controle de acesso por níveis hierárquicos</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg mb-4'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Tecnologias Principais:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>React</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>D3.js</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Python</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Tableau</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Power BI</span>
+            </div>
+        </div>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div>
+                <h4 class='font-semibold mb-2'>Recursos Exclusivos:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Análise preditiva com machine learning</li>
+                    <li>Comparativo histórico automático</li>
+                    <li>Filtros cross-dashboard</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class='font-semibold mb-2'>Impacto Mensurável:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Redução de 70% no tempo de análise de dados</li>
+                    <li>Aumento de 45% na detecção de oportunidades</li>
+                    <li>Adoção por 20+ departamentos</li>
+                </ul>
+            </div>
+        </div>
+    `
+                },
+                5: {
+                    title: "Site Corporativo Moderno",
+                    image: "src/images/projeto5.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>GlobalTech - Site Institucional</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>Website corporativo desenvolvido para empresa de tecnologia com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Design responsivo e acessível (WCAG 2.1)</li>
+                <li>Sistema de gerenciamento de conteúdo (CMS)</li>
+                <li>Páginas dinâmicas para produtos e serviços</li>
+                <li>Integração com CRM e ferramentas de marketing</li>
+                <li>SEO otimizado para aumento de visibilidade</li>
+                <li>Tempo de carregamento inferior a 2s</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg mb-4'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Tecnologias Utilizadas:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>WordPress</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Elementor Pro</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>PHP</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>JavaScript</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Google Analytics</span>
+            </div>
+        </div>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div>
+                <h4 class='font-semibold mb-2'>Destaques:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Design minimalista e profissional</li>
+                    <li>Formulários inteligentes com validação</li>
+                    <li>Blog integrado para conteúdo estratégico</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class='font-semibold mb-2'>Resultados:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Aumento de 150% no tráfego orgânico</li>
+                    <li>Taxa de conversão de 4,7% em contatos</li>
+                    <li>Redução de 35% na taxa de rejeição</li>
+                </ul>
+            </div>
+        </div>
+    `
+                },
+                6: {
+                    title: "API de Serviços Financeiros",
+                    image: "src/images/projeto6.gif",
+                    content: `
+        <h3 class='text-xl font-bold text-white mb-3'>FinAPI - Plataforma Bancária como Serviço</h3>
+        <div class='mb-4'>
+            <p class='mb-3'>API RESTful para integração de serviços financeiros com:</p>
+            <ul class='list-disc pl-5 mb-4 space-y-2'>
+                <li>Autenticação JWT com OAuth 2.0</li>
+                <li>Endpoints para transações, saldos e extrato</li>
+                <li>Webhooks para notificações em tempo real</li>
+                <li>Documentação Swagger/OpenAPI completa</li>
+                <li>Rate limiting (1000 requests/minuto)</li>
+                <li>Cache Redis para alta performance</li>
+            </ul>
+        </div>
+        <div class='bg-white/10 p-4 rounded-lg mb-4'>
+            <h4 class='font-semibold text-amber-400 mb-2'>Stack Técnica:</h4>
+            <div class='flex flex-wrap gap-2'>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Node.js</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Express</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>MongoDB</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Redis</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>AWS Lambda</span>
+                <span class='px-3 py-1 bg-amber-400/20 text-amber-400 rounded-full text-xs'>Jest</span>
+            </div>
+        </div>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div>
+                <h4 class='font-semibold mb-2'>Métricas de Performance:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Latência média: 58ms</li>
+                    <li>Uptime 99.98% (SLA)</li>
+                    <li>Processamento de 2.3M req/dia</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class='font-semibold mb-2'>Recursos de Segurança:</h4>
+                <ul class='list-disc pl-5 space-y-1 text-sm'>
+                    <li>Criptografia AES-256</li>
+                    <li>Sanitização de inputs</li>
+                    <li>Proteção contra DDoS</li>
+                </ul>
+            </div>
+        </div>
+        <div class='mt-4 text-sm bg-black/20 p-3 rounded border-l-4 border-amber-400'>
+            <p class='font-medium'>Case de Sucesso:</p>
+            <p>Integrada por 12 fintechs, reduzindo tempo de desenvolvimento de features financeiras em 65%</p>
+        </div>
+    `
+                }
+            };
+
+            // Elementos do DOM
+            const overlay = document.getElementById('overlay');
+            const prevBtn = document.getElementById('prevProject');
+            const nextBtn = document.getElementById('nextProject');
+            const closeBtn = document.getElementById('closeOverlay');
+            const projectTitle = document.getElementById('project-title');
+            const projectImage = document.getElementById('project-image');
+            const projectContent = document.getElementById('project-content');
+
+            // Função para carregar um projeto no overlay
+            function loadProject(projectId) {
+                const project = projects[projectId];
+                if (project) {
+                    currentProjectId = projectId;
+                    projectTitle.textContent = project.title;
+                    projectImage.src = project.image;
+                    projectImage.alt = project.title;
+                    projectContent.innerHTML = project.content;
+
+                    // Atualiza visibilidade dos botões de navegação
+                    prevBtn.style.display = projectId === 1 ? 'none' : 'block';
+                    nextBtn.style.display = projectId === totalProjects ? 'none' : 'block';
+                }
+            }
+
+            // Evento para abrir overlay (adicione a classe 'open-overlay' e data-project aos botões dos projetos)
+            document.querySelectorAll('.open-overlay').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const projectId = parseInt(button.getAttribute('data-project'));
+                    loadProject(projectId);
+                    overlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Navegação entre projetos
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentProjectId > 1) {
+                    loadProject(currentProjectId - 1);
+                }
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (currentProjectId < totalProjects) {
+                    loadProject(currentProjectId + 1);
+                }
+            });
+
+            // Fechar overlay
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                overlay.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Fechar ao clicar fora do conteúdo
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+<script>
+    AOS.init();
+</script>
+
+</html>
